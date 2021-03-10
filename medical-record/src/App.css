@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+/* signIn / signUp*/
+#signIn{
+  /* background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-fresh-medical-hygiene-advertising-board-design-background-image_153562.jpg"); */
+ background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-medical-medical-element-red-heart-red-cross-image_14511.jpg");
+}
+#signInForm button{
+  background-color: #A00415;
+  color:white;
+}
+#signInForm button, #signUpForm button{
+  width: 40%;
+  margin-top: 2vh;
+  margin-left: auto;
+}
+#signUpForm button{
+  background-color: #99D8EA;
+  color:black;
+}
+#signInForm, #signUpForm{
+  width: 30%;
+  margin:auto;
+}
+#signUp, #signIn{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+}
+#signInForm input, #signUpForm input{
+  margin: 10px;
+}
+#signUp{
+ /* background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190220/ourmid/pngtree-technology-technology-health-doctors-image_10060.jpg"); */
+ background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/65/17/3657add54e29bcb.jpg")
+
+}
+#accountExist{text-align: left;}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

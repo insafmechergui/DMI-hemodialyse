@@ -27,7 +27,7 @@ export default class Allergies extends Component {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Button >add row</Button>
+                    <Button className='button'>add row</Button>
                 </FormControl>
             </div>
         )

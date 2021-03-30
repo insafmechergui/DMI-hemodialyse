@@ -6,7 +6,7 @@ export default class Nav extends Component {
     render() {
         return (
             <div>
-                <AppBar position="fixed">
+                <AppBar position="fixed" id='navBar'>
                     <Toolbar>
                         <Typography>
                             Medical App

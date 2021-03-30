@@ -7,7 +7,7 @@ export default class HistoireMaladie extends Component {
             <div >
                 <FormControl  id="illnesses">
                     <TextareaAutosize  rowsMin={20} cols={100} placeholder="Description de la maladie" />
-                    <Button >More</Button>
+                    <Button className='button'>More</Button>
                 </FormControl>
             </div>
         )

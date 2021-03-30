@@ -29,7 +29,7 @@ export default class Resume extends Component {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Button >Save</Button>
+                    <Button className='button'>Save</Button>
                 </FormControl>
             </div>
         )

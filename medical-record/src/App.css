@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+#navBar
+{
+  background-color:#77A6B4;
+  color:white
+}
 /* signIn / signUp*/
 #signIn{
   /* background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-fresh-medical-hygiene-advertising-board-design-background-image_153562.jpg"); */
@@ -30,7 +34,7 @@
   display: flex;
 }
 #addPatientForm input, #signInForm input, #signUpForm input{
-  margin: 10px;
+  margin: 5px;
 }
 #signUp{
  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/65/17/3657add54e29bcb.jpg")
@@ -40,26 +44,26 @@
 
 /* add patient */
 .tab{
-  background-color: #bdf6f0;
+  background-color: #E28A67;
   /* background-color: #2F4252;
   color: */
 
 }
 #addPatient{
-  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-medical-day-simple-blue-doctors-image_14460.jpg');
+  /* background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-medical-day-simple-blue-doctors-image_14460.jpg'); */
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-medical-doctor-science-background-backgroundbackgrounddoctorsmedicalmedicinehealth-image_68227.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 99vh;
   text-align: center;
 }
 #addPatient .button {
   width: 20vh;
   float: right; 
-  margin-top: -30px; 
-  background-color: #2F4252;
-  color: #bdf6f0;
+  background-color: #E28A67;
 }
+
 #addPatient h3{
   padding-top: 10vh;
 }
@@ -68,6 +72,20 @@
 }
 #illnesses{
   opacity: 0.7;
+}
+.addRow{
+  /* width: 30%;*/
+  /* float: right;  */
+}
+/* antecedent */
+
+#antecedent #antForm{
+display: block;
+width: 70%;
+margin:auto;
+}
+.groupButtons{
+display: flex;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

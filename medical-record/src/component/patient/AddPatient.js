@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import Button from '@material-ui/core/Button';
-import {FormControl,Input,NativeSelect,FormLabel,FormControlLabel,RadioGroup,Radio,AppBar, Tabs, Tab } from '@material-ui/core'
-import {Link} from 'react-router-dom'
-import GeneralInformation from './record/GeneralInformation';
-import IllnessesHistory from './record/IllnessesHistory';
+import React from 'react'
+import { Tabs, Tab } from '@material-ui/core'
 import Allergies from './record/Allergies';
 import Tests from './record/Tests';
-import Abstract from './record/Abstract';
+import Antecedent from './record/Antecedent';
+import HistoireMaladie from './record/HistoireMaladie';
+import InformationsGenerales from './record/InformationsGenerales';
+import Resume from './record/Resume';
 
 const AddPatient =()=> {
 
@@ -20,21 +19,21 @@ const AddPatient =()=> {
 
             <div id="addPatient">
                 <h3>Add Patient</h3>
-                    <Tabs  value={selectedTab} onChange={handleChange}>
-                        <Tab label="General Information "  />
+                    <Tabs  value={selectedTab} onChange={handleChange} className="tab">
+                        <Tab label="Informations Générales "  />
+                        <Tab label="Antécedents"  />
+                        <Tab label="Histoire de la maladie"  />
                         <Tab label="Allergies"  />
-                        <Tab label="History of Illnesses"  />
-                        <Tab label="Tests"  />
-                        <Tab label="Abstract"  />
-                   
-
+                        <Tab label="Examens"  />
+                        <Tab label="Resumés"  />
                     </Tabs>
-                {selectedTab === 0 && <GeneralInformation/>}
-                {selectedTab === 1 && <Allergies/>}
-                {selectedTab === 2 && <IllnessesHistory/>}
-                {selectedTab === 3 && <Tests/>}
-                {selectedTab === 4 && <Abstract/>}
-                      </div>
+                {selectedTab === 0 && <InformationsGenerales/>}
+                {selectedTab === 1 && <Antecedent/>}
+                {selectedTab === 2 && <HistoireMaladie/>}
+                {selectedTab === 3 && <Allergies/>}
+                {selectedTab === 4 && <Tests/>}
+                {selectedTab === 5 && <Resume/>}
+            </div>
         )
     
 }

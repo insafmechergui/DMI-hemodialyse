@@ -1,7 +1,7 @@
 import { Button, FormControl,Table,TextareaAutosize, TableBody, TableCell, TableContainer, TableHead, TableRow, Input } from '@material-ui/core'
 import React, { Component } from 'react'
 
-export default class Abstract extends Component {
+export default class Resume extends Component {
  render(){
         return (
             <div>

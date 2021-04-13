@@ -1,13 +1,13 @@
-import { Button, FormControl,Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
+import {Input, Button, FormControl,Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import React, { Component } from 'react'
 
 export default class Allergies extends Component {
  render(){
         return (
-            <div>
-                <FormControl  id="antecedent">
+            <div id="allergie">
+                <FormControl  id='antForm'> 
                     <TableContainer>
-                        <Table size="small">
+                        <Table id='table'>
                             <TableHead>
                                 <TableRow>
                                     <TableCell>Allergies</TableCell>
@@ -16,18 +16,25 @@ export default class Allergies extends Component {
                                
                             <TableBody>
                                 <TableRow>
-                                    <TableCell>vbfgfhgjtyjtyjyghfgh</TableCell>
+                                    <TableCell><Input  placeholder="Allergie"/></TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>vbfgfhgjtyjtyjyghfgh</TableCell>
+                                    <TableCell><Input  placeholder="Allergie"/></TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>vbfgfhgjtyjtyjyghfgh</TableCell>
+                                    <TableCell><Input  placeholder="Allergie"/></TableCell>
                                 </TableRow>
+                                <TableRow>
+                                    <TableCell><Input  placeholder="Allergie"/></TableCell>
+                                </TableRow>
+                              
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Button className='button'>add row</Button>
+                    <div className='groupButtons'>
+                        <Button className='addRow'>Ajouter une ligne</Button>
+                        <Button className='button' >Next</Button>
+                    </div>
                 </FormControl>
             </div>
         )

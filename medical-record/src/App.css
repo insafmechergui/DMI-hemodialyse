@@ -64,29 +64,33 @@
   background-color: #E28A67;
 }
 
-#addPatient h3{
+#addPatient h3, #displayPatient h3{
   padding-top: 10vh;
 }
 .generalInformationForm >*{
   margin:5vh ;
 }
 #illnesses{
-  opacity: 0.7;
+  opacity: 0.8;
+  margin-top: 5vh;
 }
-.addRow{
-  /* width: 30%;*/
-  /* float: right;  */
+#illnesses .button{
+  margin-top: 2vh;
+
 }
 /* antecedent */
 
 #antecedent #antForm{
 display: block;
-width: 70%;
+width: 60%;
 margin:auto;
 }
 .groupButtons{
 display: flex;
 }
+
+/* allergie */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

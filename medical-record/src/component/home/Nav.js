@@ -16,7 +16,8 @@ export default class Nav extends Component {
                             <Tabs >
                             <Tab label='Sign In'  to='/signIn' component={Link} />
                             <Tab label='Sign Up'  to='/signUp' component={Link} />
-                            <Tab label='Add Patient'  to='/addPatient' component={Link} />
+                            <Tab label='Ajouter Patient'  to='/addPatient' component={Link} />
+                            <Tab label='Afficher les Patients'  to='/displayPatient' component={Link} />
 
                             </Tabs>
                     </Toolbar>

@@ -18,7 +18,7 @@ const AddPatient =()=> {
         return (
 
             <div id="addPatient">
-                <h3>Add Patient</h3>
+                <h3>Ajouter un Patient</h3>
                     <Tabs  value={selectedTab} onChange={handleChange} className="tab">
                         <Tab label="Informations Générales "  />
                         <Tab label="Antécedents"  />

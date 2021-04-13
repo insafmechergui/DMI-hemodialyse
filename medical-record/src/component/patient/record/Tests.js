@@ -41,7 +41,7 @@ export default class Tests extends Component {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Button className='button'>More</Button>
+                    <Button className="button" >Next</Button>
                 <ScrollToBottom >
 
                  

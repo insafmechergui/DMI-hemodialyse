@@ -9,7 +9,8 @@ export default class Nav extends Component {
                 <AppBar position="fixed" id='navBar'>
                     <Toolbar>
                         <Typography>
-                            Medical App
+                        <Tab label='Medical App'  to='/' component={Link} />
+                            
                        
                         </Typography>
                        

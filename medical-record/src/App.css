@@ -64,6 +64,7 @@
   background-color: #E28A67;
 }
 
+
 #addPatient h3, #displayPatient h3{
   padding-top: 10vh;
 }
@@ -88,7 +89,70 @@ margin:auto;
 .groupButtons{
 display: flex;
 }
+/* display patient */
+/* #displayPatient{
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/55/21/075863d7c5f12c4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 99vh;
+} */
+#displayPatient{
+  background-color: #E1ECF0;
+  min-height: 97vh;
 
+}
+.maj>*{
+  margin: 5px;
+}
+#update, #delete {
+  transition: all .3s ease-in-out; 
+  cursor: pointer;
+}
+#delete{
+  color:rgb(252, 116, 116)
+}
+#delete :hover{
+  color:red;
+  transform: scale(1.1);
+}
+#update{
+  color:rgb(0, 163, 0);
+}
+#update :hover{
+  color: rgb(5, 97, 5);
+  transform: scale(1.1);
+}
+/* home */
+#home{
+  /* background-image: url('https://cdn.dribbble.com/users/27231/screenshots/2432051/welcome.gif'); */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  color:white;
+  */
+  min-height: 98vh;
+  background-color: #F5F5F5;
+}
+#homePage{
+  
+}
+#home h1 {
+  background-color: #F5D9B1;
+  text-transform:uppercase;
+  font-size: 90px;
+  color: #3B3A40;
+  margin-bottom: 5px;
+}
+#home .text{
+  float: right;
+  width: 60%;
+  margin:auto;
+}
+#home .picture{
+  float: left;
+  width: 30%;
+  margin: auto;
+  }
 /* allergie */
 
 @media (prefers-reduced-motion: no-preference) {

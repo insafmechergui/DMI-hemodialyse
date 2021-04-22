@@ -14,13 +14,17 @@
 #signInForm button{
   background-color: #A00415;
   color:white;
+  margin:auto;
+  margin-top: 10px;
 }
-#signInForm button, #signUpForm button, #illnesses button,#addPatient button{
+ #illnesses button,#addPatient button{
   margin: auto;
 }
 #signUpForm button{
   background-color: #99D8EA;
   color:black;
+  margin:auto;
+  margin-top: 10px;
 }
 #signInForm, #signUpForm{
   width: 30%;
@@ -66,7 +70,7 @@
 
 
 #addPatient h3, #displayPatient h3{
-  padding-top: 10vh;
+  padding-top: 3em;
 }
 .generalInformationForm >*{
   margin:5vh ;
@@ -134,25 +138,56 @@ display: flex;
   background-color: #F5F5F5;
 }
 #homePage{
-  
+  display: flex;
+  justify-content: space-around
 }
 #home h1 {
   background-color: #F5D9B1;
   text-transform:uppercase;
-  font-size: 90px;
+  font-size: 5.4em;
   color: #3B3A40;
-  margin-bottom: 5px;
 }
 #home .text{
-  float: right;
+  /* float: right;
   width: 60%;
-  margin:auto;
+  margin:auto; */
+  text-align: justify;
+  font-size: 1.4em;
+}
+#home .text>:first-child{
+  font-weight: bold;
+  font-size: 2em;
 }
 #home .picture{
-  float: left;
-  width: 30%;
-  margin: auto;
-  }
+  /* float: left;
+  width: 40%;
+  margin: auto; */
+  margin-top: -9vh;
+ } 
+ #register{
+    position: absolute;
+   bottom: 4em;
+   /*display: flex;
+  flex-direction: column;  
+  justify-content: space-between; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.register{
+  color:green;
+  text-decoration: none;
+}
+.register{
+  color:green;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+.signIn{
+  color:red;
+  text-decoration: none;
+}
 /* allergie */
 
 @media (prefers-reduced-motion: no-preference) {

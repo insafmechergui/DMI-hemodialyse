@@ -7,7 +7,7 @@ export default class SignUp extends Component {
     render() {
         return (
             <div id = "signUp">
-                <FormControl id="signUpForm" >
+                <form id="signUpForm" >
                     <h3>Register    </h3>
     
                     <NativeSelect id="select">
@@ -23,7 +23,7 @@ export default class SignUp extends Component {
                     <Button color="primary">Sign In</Button>
                     <p id="accountExist">If you have account, <Link to ="/signIn">Sign In</Link></p>
 
-                </FormControl>
+                </form>
             </div>
         )
     }

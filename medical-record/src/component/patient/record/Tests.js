@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import {FormControl,Input,Table, TableBody, TableCell, TableContainer, TableHead, TableRow  } from '@material-ui/core'
 
-import ScrollToBottom from 'react-scroll-to-bottom';
-
 export default class Tests extends Component {
     render() {
        
@@ -42,11 +40,6 @@ export default class Tests extends Component {
                         </Table>
                     </TableContainer>
                     <Button className="button" >Next</Button>
-                <ScrollToBottom >
-
-                 
-                    </ScrollToBottom>
-
                 </FormControl>
             </div>
         )

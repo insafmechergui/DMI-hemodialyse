@@ -6,7 +6,6 @@ import Home from './component/home/Home';
 import Nav from './component/home/Nav';
 import AddPatient from './component/patient/AddPatient';
 import DisplayPatient from './component/patient/DisplayPatient';
-import Antecedent from './component/patient/record/Antecedent';
 
 function App() {
   return (

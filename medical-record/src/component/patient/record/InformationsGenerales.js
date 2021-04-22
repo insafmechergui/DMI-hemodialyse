@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import {FormControl,Input,NativeSelect,FormLabel,FormControlLabel,Radio  } from '@material-ui/core'
-import Antecedent from './Antecedent';
-import { Link,Redirect } from 'react-router-dom';
-
 
 export default class InformationsGenerales extends Component {
    

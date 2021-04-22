@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { TextField, TextareaAutosize, Input, Button, FormControl,Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
-import $ from "jquery";
+import {TextField, Input, Button, FormControl,Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 
 export default class Antecedent extends Component {
     constructor(props){

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Input } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateIcon from '@material-ui/icons/Create';
+import patients from '../../data/patient.json'
 
 export default class DisplayPatient extends Component {
     
@@ -9,9 +10,8 @@ export default class DisplayPatient extends Component {
         return (
             <div id="displayPatient">
                 <h3>Afficher les Patients</h3>
-
-                 <TableContainer>
-                        <Table>
+                 <TableContainer >
+                        <Table >
                             <TableHead>
                                 <TableRow>
                                     <TableCell>N°Dossier</TableCell>
@@ -20,61 +20,37 @@ export default class DisplayPatient extends Component {
                                     <TableCell>Telephone</TableCell>
                                     <TableCell>Grouppe Sanguin</TableCell>
                                     <TableCell>Affiliation Sociale</TableCell>
-                                    <TableCell>Allergie</TableCell>
+                                    <TableCell>Allergies</TableCell>
                                     <TableCell>Antecedents</TableCell>
                                     <TableCell>Operation</TableCell>
                                 </TableRow>
                             </TableHead>
                                
-                            <TableBody>
-                                <TableRow>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
+                            <TableBody >
+                                    {patients.map(patient=>{
+                                        return(
+                                <TableRow key={patient.id}>
+                                    <TableCell>{patient.id}</TableCell>
+                                    <TableCell>{patient.nom}</TableCell>
+                                    <TableCell>{patient.prenom}</TableCell>
+                                    <TableCell>{patient.telephone}</TableCell>
+                                    <TableCell>{patient.groupeSanguin}</TableCell>
+                                    <TableCell>{patient.affiliation}</TableCell>
+                                    <TableCell>{patient.allergies}</TableCell>
+                                    <TableCell>{patient.antecedent}</TableCell>
+                                        
+                                  
                                     <TableCell>
                                         <div className='groupButtons maj'>
-                                            <DeleteIcon id='delete'/> 
-                                            <CreateIcon id='update'/>
+                                          <button><DeleteIcon id='delete'/></button>   
+                                          <button><CreateIcon id='update'/></button>  
                                         </div>
                                     </TableCell>
                                 </TableRow>
-                                <TableRow>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell>
-                                        <div className='groupButtons maj'>
-                                            <DeleteIcon id='delete'/> 
-                                            <CreateIcon id='update'/>
-                                        </div>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell>
-                                        <div className='groupButtons maj'>
-                                            <DeleteIcon id='delete'/> 
-                                            <CreateIcon id='update'/>
-                                        </div>
-                                    </TableCell>
-                                </TableRow>
+                                )
+                            }
+                                
+                            )}
                             </TableBody>
                         </Table>
                     </TableContainer>

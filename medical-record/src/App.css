@@ -127,6 +127,9 @@ display: flex;
   color: rgb(5, 97, 5);
   transform: scale(1.1);
 }
+.tableStyle:nth-child(odd){
+  background-color: #99D8EA;
+}
 /* home */
 #home{
   /* background-image: url('https://cdn.dribbble.com/users/27231/screenshots/2432051/welcome.gif'); */

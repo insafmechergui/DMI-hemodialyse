@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "nom":"patient1",
+        "prenom":"patient prenom 1",
+        "telephone":123456,
+        "groupeSanguin":"A",
+        "affiliation":"CNAM",
+        "allergies":"allergie1",
+        "antecedent":"antecedent1"
+    },
+    {
+        "id":2,
+        "nom":"patient2",
+        "prenom":"patient prenom 2",
+        "telephone":223456,
+        "groupeSanguin":"B",
+        "affiliation":"CNAM",
+        "allergies":"allergie2",
+        "antecedent":"antecedent2"
+    },
+    {
+        "id":3,
+        "nom":"patient3",
+        "prenom":"patient prenom 3",
+        "telephone":323456,
+        "groupeSanguin":"AB",
+        "affiliation":"CNAM",
+        "allergies":"allergie3",
+        "antecedent":"antecedent3"
+    },
+    {
+        "id":4,
+        "nom":"patient4",
+        "prenom":"patient prenom 4",
+        "telephone":423456,
+        "groupeSanguin":"O-",
+        "affiliation":"CNAM",
+        "allergies":"allergie4",
+        "antecedent":"antecedent4"
+    }
+]

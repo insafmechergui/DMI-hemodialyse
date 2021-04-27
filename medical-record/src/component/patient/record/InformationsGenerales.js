@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component,useState, useEffect, useRef } from 'react'
 import Button from '@material-ui/core/Button';
 import {FormControl,Input,NativeSelect,FormLabel,FormControlLabel,Radio  } from '@material-ui/core'
+import axios from 'axios'
+import {v1 as uuidv1} from 'uuid'
 
 export default class InformationsGenerales extends Component {
    

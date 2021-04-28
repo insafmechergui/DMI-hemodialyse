@@ -1,49 +1,136 @@
-import React, { Component,useState, useEffect, useRef } from 'react'
+import React, { Component} from 'react'
 import Button from '@material-ui/core/Button';
 import {FormControl,Input,NativeSelect,FormLabel,FormControlLabel,Radio  } from '@material-ui/core'
-import axios from 'axios'
-import {v1 as uuidv1} from 'uuid'
+
 
 export default class InformationsGenerales extends Component {
-   
+    constructor(){
+        super()
+        this.state={
+            cin:'',
+            nom:'',
+            prenom:'',
+            dateNaissance:'',
+            adresse:'',
+            profession:'',
+            phone:'',
+            dateSick:'',
+
+
+        }
+    }
     render() {
         return (
             <div id="generalInformation">
-                <FormControl id="addPatientForm" >
-                    <div className="generalInformationForm">
-                        <Input  required placeholder="CIN" type="number"/>
-                        <Input  required placeholder="Name"/>
-                        <Input  required placeholder="Last Name"/>
-                        <FormLabel >Birth Date</FormLabel >
-                        <Input  type="date"/>
-                        <Input  placeholder="Address"/>
-                        <Input  placeholder="Profession"/>
-                        <Input  required placeholder="Phone Number" type="number"/>
-                        <hr/>
-                       <FormLabel >Start of dialysis</FormLabel >
-                        <Input  required type="Date"/>
-                        <FormLabel >Days</FormLabel >
-                        <NativeSelect id="select">
-                            <option value="odd">Odd Day </option>
-                            <option value="even">Even Day</option>
-                        </NativeSelect>
-                        <div>
-                        <FormLabel>Blood Group</FormLabel>
-                            <FormControlLabel value="A" control={<Radio />} label="A" />
-                            <FormControlLabel value="B" control={<Radio />} label="B" />
-                            <FormControlLabel value="O" control={<Radio />} label="O" />
-                            <FormControlLabel value="AB" control={<Radio />} label="AB" />
-                            <FormControlLabel value="ANeg" control={<Radio />} label="A-" />
-                            <FormControlLabel value="BNeg" control={<Radio />} label="B-" />
-                            <FormControlLabel value="ONeg" control={<Radio />} label="O-" />
-                            <FormControlLabel value="ABNeg" control={<Radio />} label="AB-" />
-                        <FormLabel>social affiliation</FormLabel>
-                            <FormControlLabel value="cnam" control={<Radio />} label="CNAM" />
-                            <FormControlLabel value="other" control={<Radio />} label="Other" />
+                <form id="addPatientForm" className="generalInformationForm" class="form">
+                    <div class="field">
+                        <label class="label">CIN</label>
+                        <div class="control">
+                            <input class="input" required placeholder="CIN" type="number" name='cin' />
                         </div>
-                        <Button className="button" >Next</Button>
                     </div>
-                </FormControl>
+                    <div class="field">
+                        <label class="label">Nom</label>
+                        <div class="control">
+                            <input class="input" required placeholder="Name" type="text" name='nom'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Prenom</label>
+                        <div class="control">
+                            <input class="input" required placeholder="prenom" type="text" name='prenom'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Date de naissance</label>
+                        <div class="control">
+                            <input class="input" type="date" name='dateNaissance'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Adresse</label>
+                        <div class="control">
+                            <input class="input"  placeholder="adresse" type="text" name='adresse'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Profession</label>
+                        <div class="control">
+                            <input class="input" placeholder="profession" type="text" name='profession'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Telephone</label>
+                        <div class="control">
+                            <input class="input" placeholder="Phone" type="number" name='phone'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Date de debut de maladie</label>
+                        <div class="control">
+                            <input class="input" type="date" name='dateSick'/>
+                        </div>
+                    </div>
+                    <div class="field">
+                    <label class="label">Groupe Sanguin</label>
+                        <div class="control">
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin" />
+                            A+
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            B+
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            O+
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            AB+
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            A-
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            B-
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            O-
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="groupeSanguin"/>
+                            AB-
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                    <label class="label">Affiliation</label>
+                        <label class="radio">
+                            <input type="radio" name="affiliation"/>
+                            CNAM
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="affiliation"/>
+                            Autre
+                        </label>
+                    </div>
+
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link">Next</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-link is-light">Cancel</button>
+                        </div>
+                    </div>  
+                </form>
             </div>
         )
     }

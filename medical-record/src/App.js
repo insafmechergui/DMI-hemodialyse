@@ -6,6 +6,7 @@ import Home from './component/home/Home';
 import Nav from './component/home/Nav';
 import AddPatient from './component/patient/AddPatient';
 import DisplayPatient from './component/patient/DisplayPatient';
+import InformationsGenerales from './component/patient/record/InformationsGenerales';
 
 function App() {
   return (
@@ -13,11 +14,13 @@ function App() {
         <div className="App">
           <Nav/>
           <Switch >
+            <Route exact path='/' component={Home}/>
             <Route path='/signIn' component={SignIn}/>
             <Route path='/signUp' component={SignUp}/>
             <Route path='/addPatient' component={AddPatient}/>
             <Route path='/displayPatient' component={DisplayPatient}/>
-            <Route path='/' component={Home}/>
+            <Route  path='/informationGenerale' component={InformationsGenerales}/>
+
           </Switch>
         </div>
       </Router>

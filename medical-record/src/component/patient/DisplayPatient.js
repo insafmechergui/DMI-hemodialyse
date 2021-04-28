@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Input } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateIcon from '@material-ui/icons/Create';
-import patients from '../../data/patient.json'
-
+import patients from '../../patient.json'
 export default class DisplayPatient extends Component {
-    
+
     render() {
         return (
             <div id="displayPatient">

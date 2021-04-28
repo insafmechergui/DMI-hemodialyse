@@ -19,6 +19,30 @@ const AddPatient =()=> {
 
             <div id="addPatient">
                 <h3>Ajouter un Patient</h3>
+                {/* <div class="tabs is-toggle is-toggle-rounded is-centered">
+                    <ul>
+                        <li class="is-active" to="/informationGenerale">
+                        <a>
+                            <span>Informations Générales</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span>Antécedents</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span>Histoire de la maladie</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span>Allergies</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </div> */}
                     <Tabs  value={selectedTab} onChange={handleChange} className="tab">
                         <Tab label="Informations Générales "  />
                         <Tab label="Antécedents"  />

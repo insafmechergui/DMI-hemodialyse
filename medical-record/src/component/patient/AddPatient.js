@@ -45,18 +45,12 @@ const AddPatient =()=> {
                     </div> */}
                     <Tabs  value={selectedTab} onChange={handleChange} className="tab">
                         <Tab label="Informations Générales "  />
-                        <Tab label="Antécedents"  />
-                        <Tab label="Histoire de la maladie"  />
-                        <Tab label="Allergies"  />
-                        <Tab label="Examens"  />
+                        <Tab label="Maladies"  />
                         <Tab label="Resumés"  />
                     </Tabs>
                 {selectedTab === 0 && <InformationsGenerales/>}
                 {selectedTab === 1 && <Antecedent/>}
-                {selectedTab === 2 && <HistoireMaladie/>}
-                {selectedTab === 3 && <Allergies/>}
-                {selectedTab === 4 && <Tests/>}
-                {selectedTab === 5 && <Resume/>}
+                {selectedTab === 2 && <Resume/>}
             </div>
         )
     

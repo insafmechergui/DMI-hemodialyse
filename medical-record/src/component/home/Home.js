@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
     return (
         <div id="home">
-            <h1 >Hooooray!</h1>
+            {/* <h1 >Hooooray!</h1> */}
             <div id='homePage'>
                 <div className='picture'>
                     <img width='300' src='https://png.pngtree.com/png-clipart/20190516/original/pngtree-medical-cartoon-doctor-cute-smiley-face-wear-mask-png-image_3776568.jpg'/>

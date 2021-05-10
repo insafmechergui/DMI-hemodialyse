@@ -7,6 +7,7 @@ export default class InformationsGenerales extends Component {
     constructor(){
         super()
         this.state={
+            patients:[],
             cin:'',
             nom:'',
             prenom:'',
@@ -14,8 +15,7 @@ export default class InformationsGenerales extends Component {
             adresse:'',
             profession:'',
             phone:'',
-            dateSick:'',
-            patients:[]
+            dateSick:''
 
         }
     }
@@ -40,9 +40,12 @@ export default class InformationsGenerales extends Component {
          this.setState({
            patients:this.state.patients.concat(patient)
           })
+         dataPatient.push(patient)
         }
-    render() {
-        console.log('pattient',this.state.patients)
+
+        render() {
+            console.log('data',dataPatient);
+            console.log('pattient',this.state.patients)
         return (
             <div id="generalInformation">
                 <form id="addPatientForm" className="generalInformationForm" class="form" onSubmit={this.onSubmit}>
@@ -148,9 +151,6 @@ export default class InformationsGenerales extends Component {
                     <div class="field is-grouped">
                         <div class="control">
                             <button class="button is-link">Next</button>
-                        </div>
-                        <div class="control">
-                            <button class="button is-link is-light">Cancel</button>
                         </div>
                     </div>  
                 </form>

@@ -5,36 +5,52 @@ export default class Resume extends Component {
  render(){
         return (
             <div>
-                <FormControl >
-                <TextareaAutosize  rowsMin={10} cols={100} placeholder="resume" />
-
-                    <TableContainer>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Injection</TableCell>
-                                    <TableCell>Dosage</TableCell>
-                                </TableRow>
-                            </TableHead>
-                               
-                            <TableBody>
-                                <TableRow>
-                                    <TableCell><Input /></TableCell>
-                                    <TableCell><Input /></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                <TableCell><Input /></TableCell>
-                                <TableCell><Input /></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                <TableCell><Input /></TableCell>
-                                <TableCell><Input /></TableCell>
-                                </TableRow>
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                    <Button className='button'>Save</Button>
-                </FormControl>
+                <h2>Les examens</h2>
+                <form class="form">                    
+                <table class="table has-background-white-bis" >
+                        <thead>
+                            <tr>
+                                <th>Examens</th>
+                                <th>Resume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table class="table has-background-white-bis" >
+                                        <thead>
+                                            <tr>
+                                                <th>Test</th>
+                                                <th>Resultat</th>
+                                            </tr>
+                                        </thead>
+                                    
+                                        <tbody>
+                                            <tr>
+                                                <td>test</td>
+                                                <td><input class="input" type="text" placeholder="eco abdomino"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>test</td>
+                                                <td><input class="input" type="text" placeholder="eco abdomino"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>test</td>
+                                                <td><input class="input" type="text" placeholder="eco abdomino"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <textarea class="textarea" placeholder="Histoire de la maladie" cols="100" rows="10"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <div class="control">
+                            <button class="button is-link">Save</button>
+                        </div> 
+                </form>
             </div>
         )
     }

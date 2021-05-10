@@ -8,51 +8,44 @@ export default class DisplayPatient extends Component {
     render() {
         return (
             <div id="displayPatient">
-                <h3>Afficher les Patients</h3>
-                 <TableContainer >
-                        <Table >
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>N°Dossier</TableCell>
-                                    <TableCell>Nom</TableCell>
-                                    <TableCell>Prenom</TableCell>
-                                    <TableCell>Telephone</TableCell>
-                                    <TableCell>Grouppe Sanguin</TableCell>
-                                    <TableCell>Affiliation Sociale</TableCell>
-                                    <TableCell>Allergies</TableCell>
-                                    <TableCell>Antecedents</TableCell>
-                                    <TableCell>Operation</TableCell>
-                                </TableRow>
-                            </TableHead>
-                               
-                            <TableBody >
+<p>G.S ={'>'} Groupe Sanguin</p> 
+<p>A.S ={'>'} Affiliation Sociale</p>
+                            <table class="table has-background-white-bis">
+                                <thead>
+                                    <tr>
+                                        <th> N°Dossier</th>
+                                        <th> Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Telephone</th>
+                                        <th>G.S</th>
+                                        <th>A.S</th>
+                                        <th>Allergies</th>
+                                        <th>Operation</th>
+                                    </tr>
+                                </thead>
+                            
                                     {patients.map(patient=>{
-                                        return(
-                                <TableRow key={patient.id}>
-                                    <TableCell>{patient.id}</TableCell>
-                                    <TableCell>{patient.nom}</TableCell>
-                                    <TableCell>{patient.prenom}</TableCell>
-                                    <TableCell>{patient.telephone}</TableCell>
-                                    <TableCell>{patient.groupeSanguin}</TableCell>
-                                    <TableCell>{patient.affiliation}</TableCell>
-                                    <TableCell>{patient.allergies}</TableCell>
-                                    <TableCell>{patient.antecedent}</TableCell>
-                                        
-                                  
-                                    <TableCell>
-                                        <div className='groupButtons maj'>
+                                       return(
+                                <tbody>
+                                    <tr key={patient.id}>
+                                    <td>{patient.id}</td>
+                                    <td>{patient.nom}</td>
+                                    <td>{patient.prenom}</td>
+                                    <td>{patient.telephone}</td>
+                                    <td>{patient.groupeSanguin}</td>
+                                    <td>{patient.affiliation}</td>
+                                    <td>{patient.allergies}</td>
+                                    <td><div className='groupButtons maj'>
                                           <button><DeleteIcon id='delete'/></button>   
                                           <button><CreateIcon id='update'/></button>  
-                                        </div>
-                                    </TableCell>
-                                </TableRow>
-                                )
-                            }
+                                        </div></td>
+                                </tr>
+                            
+                                </tbody>
+                                       )})}
+                            </table>             
                                 
-                            )}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                                        
             </div>
         )
     }

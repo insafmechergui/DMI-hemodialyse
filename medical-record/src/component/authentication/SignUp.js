@@ -9,11 +9,6 @@ export default class SignUp extends Component {
             <div id = "signUp">
                 <FormControl id="signUpForm" >
                     <h3>Register    </h3>
-    
-                    <NativeSelect id="select">
-                        <option value="admin">Admin</option>
-                        <option value="doctor">Doctor</option>
-                    </NativeSelect>
                     <Input  required placeholder="User Name" />
                     <Input  required placeholder="CIN" type="number"/>
                     <Input  required placeholder="Phone Number" type="number"/>

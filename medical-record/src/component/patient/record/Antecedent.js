@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {TextField, Input, Button, FormControl,Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import dataPatient from '../../../patient.json'
 
 export default class Antecedent extends Component {
@@ -22,7 +21,6 @@ export default class Antecedent extends Component {
     onSubmit=e=>{
         e.preventDefault()
         this.setState({
-        
             maladie:this.state.maladie,
             description:this.state.description,
             maladie3:this.state.maladie3

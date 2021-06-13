@@ -1,21 +1,21 @@
 import React, { Component} from 'react'
-import dataPatient from '../../../patient.json'
+import dataPatient from '../../patient.json'
 import { finished } from 'stream';
 const fs = require('fs')
-export default class InformationsGenerales extends Component {
+
+export default class DisplayOne extends Component {
     constructor(){
         super()
         this.state={
             patients:[],
-            cin:'',
-            nom:'',
-            prenom:'',
+            cin:'2345',
             dateNaissance:'',
-            adresse:'',
-            profession:'',
-            phone:'',
-            dateSick:''
-
+            adresse:'BBBBBBB',
+            profession:'AAAAAA',
+            dateSick:'',
+            nom:"patient1",
+            prenom:"patient prenom 1",
+            phone:123456,
         }
     }
     onChange = e => {
@@ -23,16 +23,7 @@ export default class InformationsGenerales extends Component {
             [e.target.name]: e.target.value 
         });
     };
-    savePatient=(patient)=>{
-        const finished=error=>{
-            if(error){
-                console.error(error)
-            return;
-        }
-        }
-        const jsonData=JSON.stringify(patient)
-       fs.writeFile('../../../patient.json', jsonData, finished)
-    }
+  
     onSubmit = e => {
         e.preventDefault()
         const patient = {
@@ -48,15 +39,15 @@ export default class InformationsGenerales extends Component {
          this.setState({
            patients:this.state.patients.concat(patient)
           })
-         dataPatient.push(patient)
-         this.savePatient(patient)
+       
+     
         }
 
         render() {
-            console.log('data',dataPatient);
-            console.log('pattient',this.state.patients)
+ 
         return (
-            <div id="generalInformation">
+            <div id="informationOne">
+                <h2>Update Patient</h2>
                 <form id="addPatientForm" className="generalInformationForm" class="form" onSubmit={this.onSubmit}>
                     <div class="field">
                         <label class="label">CIN</label>
@@ -159,7 +150,7 @@ export default class InformationsGenerales extends Component {
 
                     <div class="field is-grouped">
                         <div class="control">
-                            <button class="button is-link">Next</button>
+                            <button class="button is-link">Save</button>
                         </div>
                     </div>  
                 </form>

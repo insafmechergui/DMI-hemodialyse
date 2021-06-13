@@ -59,6 +59,9 @@
   background-repeat: no-repeat;
   min-height: 99vh;
   text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+
 }
 #addPatient .button {
   width: 20vh;
@@ -213,6 +216,15 @@ display: flex;
 }
 /* allergie */
 
+/* one patient */
+#informationOne{
+  padding-top: 15vh ;
+ background-color: #D9E8FF;
+}
+#informationOne h2{
+  font-size: 5vh;
+
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

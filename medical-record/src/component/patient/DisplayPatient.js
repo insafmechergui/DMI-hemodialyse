@@ -1,10 +1,70 @@
 import React, { Component } from 'react'
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Input } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateIcon from '@material-ui/icons/Create';
-import patients from '../../patient.json'
+import { Link } from 'react-router-dom';
+// import patients from '../../patient.json'
 export default class DisplayPatient extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            
+            patients:[
+                {
+                    "id":1,
+                    "nom":"patient1",
+                    "prenom":"patient prenom 1",
+                    "telephone":123456,
+                    "groupeSanguin":"A",
+                    "affiliation":"CNAM",
+                    "allergies":"allergie1",
+                    "antecedent":"antecedent1"
+                },
+                {
+                    "id":2,
+                    "nom":"patient2",
+                    "prenom":"patient prenom 2",
+                    "telephone":223456,
+                    "groupeSanguin":"B",
+                    "affiliation":"CNAM",
+                    "allergies":"allergie2",
+                    "antecedent":"antecedent2"
+                },
+                {
+                    "id":3,
+                    "nom":"patient3",
+                    "prenom":"patient prenom 3",
+                    "telephone":323456,
+                    "groupeSanguin":"AB",
+                    "affiliation":"CNAM",
+                    "allergies":"allergie3",
+                    "antecedent":"antecedent3"
+                },
+                {
+                    "id":4,
+                    "nom":"patient4",
+                    "prenom":"patient prenom 4",
+                    "telephone":423456,
+                    "groupeSanguin":"O-",
+                    "affiliation":"CNAM",
+                    "allergies":"allergie4",
+                    "antecedent":"antecedent4"
+                }
+            ],
+            setData:''
+        }
+    }
+    
+    deletePatient(id){
+        // let deleteOnePatient = [...this.state.patients].filter(OBJ=>OBJ.id!==id);
 
+        // console.log('patientstate',deleteOnePatient)
+        console.log(id)
+        let deleteOne=  this.state.patients.filter(e=>e.id !== id)
+        console.log("delete",deleteOne)
+        // this.setState={patients:deleteOne}
+        return deleteOne
+    }
+    
     render() {
         return (
             <div id="displayPatient">
@@ -24,7 +84,7 @@ export default class DisplayPatient extends Component {
                                     </tr>
                                 </thead>
                             
-                                    {patients.map(patient=>{
+                                    {this.state.patients.map(patient=>{
                                        return(
                                 <tbody>
                                     <tr key={patient.id}>
@@ -36,10 +96,11 @@ export default class DisplayPatient extends Component {
                                     <td>{patient.affiliation}</td>
                                     <td>{patient.allergies}</td>
                                     <td><div className='groupButtons maj'>
-                                          <button><DeleteIcon id='delete'/></button>   
-                                          <button><CreateIcon id='update'/></button>  
+                                          <button onClick={()=>this.deletePatient(patient.id)}><DeleteIcon id='delete'/></button>   
+                                          <button ><Link to ="/displayOne"><CreateIcon id='update'/></Link></button>  
                                         </div></td>
                                 </tr>
+                                
                             
                                 </tbody>
                                        )})}

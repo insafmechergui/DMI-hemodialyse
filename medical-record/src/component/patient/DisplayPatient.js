@@ -55,13 +55,10 @@ export default class DisplayPatient extends Component {
     }
     
     deletePatient(id){
-        // let deleteOnePatient = [...this.state.patients].filter(OBJ=>OBJ.id!==id);
 
-        // console.log('patientstate',deleteOnePatient)
         console.log(id)
         let deleteOne=  this.state.patients.filter(e=>e.id !== id)
         console.log("delete",deleteOne)
-        // this.setState={patients:deleteOne}
         return deleteOne
     }
     

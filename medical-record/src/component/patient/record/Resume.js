@@ -18,12 +18,10 @@ export default class Resume extends Component {
 
             
         }
-        // this.onFileChange = this.onFileChange.bind(this);
+    
 
     }
-    // onFileChange(e) {
-    //     this.setState({ imgCollection: e.target.files })
-    // }
+
     onChange =e=>{
         this.setState({
             [e.target.name]:e.target.value,
@@ -35,11 +33,7 @@ export default class Resume extends Component {
     onSubmit=e=>{
         e.preventDefault()
         this.setState({
-            // test1:this.state.test1,
-            // test2:this.state.test2,
-            // test3:this.state.test3,
-            // testFile:this.state.testFile,
-            // resume:this.state.resume,
+      
             examen:{ test1:this.state.test1,
                 test2:this.state.test2,
                 test3:this.state.test3,
@@ -52,7 +46,6 @@ export default class Resume extends Component {
             formData.append('file', this.state.file[key])
         }
                 console.log('form',formData)
-    //    window.history.pushState(`/displayPatient`,{data:this.state.resumes});
 
     }
    
@@ -97,7 +90,6 @@ export default class Resume extends Component {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    {/* <input type="file" multiple class="input" name="testFile" value={this.state.testFile} onChange={this.onChange}/> */}
                                     <input type="file" class='input' name="file" onChange={this.onChange} multiple />
 
                                     <img src={this.state.file}/>  

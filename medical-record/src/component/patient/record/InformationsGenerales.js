@@ -23,16 +23,7 @@ export default class InformationsGenerales extends Component {
             [e.target.name]: e.target.value 
         });
     };
-    savePatient=(patient)=>{
-        const finished=error=>{
-            if(error){
-                console.error(error)
-            return;
-        }
-        }
-        const jsonData=JSON.stringify(patient)
-       fs.writeFile('../../../patient.json', jsonData, finished)
-    }
+   
     onSubmit = e => {
         e.preventDefault()
         const patient = {
@@ -49,7 +40,7 @@ export default class InformationsGenerales extends Component {
            patients:this.state.patients.concat(patient)
           })
          dataPatient.push(patient)
-         this.savePatient(patient)
+         
         }
 
         render() {

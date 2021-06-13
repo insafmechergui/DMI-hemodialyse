@@ -7,8 +7,6 @@ import Nav from './component/home/Nav';
 import AddPatient from './component/patient/AddPatient';
 import DisplayOne from './component/patient/DisplayOne';
 import DisplayPatient from './component/patient/DisplayPatient';
-import InformationsGenerales from './component/patient/record/InformationsGenerales';
-import Tests from './component/patient/record/Tests';
 
 function App() {
   return (
@@ -22,8 +20,7 @@ function App() {
             <Route path='/addPatient' component={AddPatient}/>
             <Route path='/displayPatient' component={DisplayPatient}/>
             <Route path='/displayOne' component={DisplayOne}/>
-            {/* <Route  path='/informationGenerale' component={InformationsGenerales}/> */}
-            {/* <Route  path='/test' component={Tests}/> */}
+      
 
           </Switch>
         </div>

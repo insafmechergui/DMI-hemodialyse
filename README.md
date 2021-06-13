@@ -4,8 +4,4 @@ simple application avec REACT pour creer un dossier  medicale informatisé :pill
 
 * Ceci un demo qui presente l'application :hospital: 
 
-
-https://user-images.githubusercontent.com/56113196/121808172-38a8c780-cc4f-11eb-9e10-1ac51772de94.mp4
-
-
-
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/56113196/121810966-a9091600-cc5a-11eb-8db5-59721e2e88b9.gif)
